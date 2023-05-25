@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    printf("Enter the length of the string:");
+    scanf("%d",&n);
+    char string[n+1];
+    char rev_string[n+1];
+    printf("Enter the input:");
+    for(int i=0;i<n+1;i++)
+    {
+        scanf("%c",&string[i]);
+        rev_string[n-i]=string[i];
+    }
+    printf("Normal string:");
+    for(int i=0;i<n+1;i++)
+    printf("%c",string[i]);
+    printf("\nReversed string:");
+    for(int i=0;i<n+1;i++)
+    printf("%c",rev_string[i]);
+    
+}
