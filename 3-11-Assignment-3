@@ -1,0 +1,13 @@
+Function to print maximum and minimum values from a list
+def find_max_min_values(input_list):
+    if len(input_list) == 0:
+        print("The list is empty.")
+    else:
+        max_value = max(input_list)
+        min_value = min(input_list)
+        print("Maximum value:", max_value)
+        print("Minimum value:", min_value)
+Example list
+my_list = [3, 7, 1, 9, 5, 2, 8, 4]
+ Call the function to find and print the maximum and minimum values
+find_max_min_values(my_list)
