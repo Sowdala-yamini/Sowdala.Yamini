@@ -1,0 +1,15 @@
+Function to merge two lists and find the minimum value
+def merge_and_find_min(list1, list2):
+     Merge the two lists
+    merged_list = list1 + list2
+Find the minimum value in the merged list
+    min_value = min(merged_list)
+ return merged_list, min_value
+ Example lists
+list1 = [3, 7, 1, 9]
+list2 = [5, 2, 8, 4]
+ Call the function to merge the lists and find the minimum value
+merged_list, min_value = merge_and_find_min(list1, list2)
+Print the merged list and the minimum value
+print("Merged List:", merged_list)
+print("Minimum Value:", min_value)
