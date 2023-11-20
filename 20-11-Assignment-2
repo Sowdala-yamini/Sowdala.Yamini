@@ -1,0 +1,20 @@
+def find_duplicates(lst):
+    duplicates = []
+    seen = set()
+    
+    for num in lst:
+        if num in seen and num not in duplicates:
+            duplicates.append(num)
+        else:
+            seen.add(num)
+    
+    return duplicates
+
+# Taking input
+n = int(input())
+arr = list(map(int, input().split()))
+
+# Getting the duplicate elements
+result = find_duplicates(arr)
+for num in result:
+    print(num, end=' ')
