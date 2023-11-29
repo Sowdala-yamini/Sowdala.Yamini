@@ -1,0 +1,27 @@
+import re
+
+def validate_password(password):
+    has_upper = any(c.isupper() for c in password)
+    has_lower = any(c.islower() for c in password)
+    has_digit = any(c.isdigit() for c in password)
+    has_special = any(c in '@_$' for c in password)
+    length_valid = len(password) >= 8
+
+    if has_upper and has_lower and has_digit and has_special and length_valid:
+        print("Password is Strong")
+    elif has_upper and has_lower and has_special and length_valid:
+        print("Password is Medium")
+    elif (has_upper or has_lower) and has_digit and length_valid:
+        print("Password is Weak")
+    elif not length_valid:
+        print("Password is Invalid")
+    else:
+        print("Password does not meet specific criteria")
+
+# Test cases
+validate_password("Rajesh@123")  # Strong
+validate_password("Rajesh123")   # Medium
+validate_password("aditya123")   # Weak
+validate_password("Aditya213")   # Weak
+validate_password("ADITYA123")   # Weak
+validate_password("Short@12")    # Invalid
