@@ -1,0 +1,21 @@
+def find_duplicates(arr):
+    seen = {}
+    duplicates = []
+
+    for num in arr:
+        if num in seen:
+            if seen[num] == 1:
+                duplicates.append(num)
+            seen[num] += 1
+        else:
+            seen[num] = 1
+
+    return duplicates
+
+Input
+n = int(input())
+arr = list(map(int, input().split()))
+
+ Output
+duplicates = find_duplicates(arr)
+print(*duplicates)
