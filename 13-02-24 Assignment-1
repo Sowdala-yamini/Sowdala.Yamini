@@ -1,0 +1,26 @@
+def calculate_tax(netsalary):
+    if netsalary > 50000:
+        tax = 0.05 * netsalary
+    elif netsalary > 35000:
+        tax = 0.03 * netsalary
+    elif netsalary > 20000:
+        tax = 0.01 * netsalary
+    else:
+        tax = 0
+    return tax
+
+def generate_salary_bill(empno, empname, designation, basic, hra, da, ta):
+    netsalary = basic + da + ta + hra
+    tax = calculate_tax(netsalary)
+    print("Emp No:", empno)
+    print("Emp Name:", empname)
+    print("Designation:", designation)
+    print("Basic Salary:", basic)
+    print("HRA:", hra)
+    print("DA:", da)
+    print("TA:", ta)
+    print("Net Salary:", netsalary)
+    print("Tax:", tax)
+
+ Test the function
+generate_salary_bill(101, "John Doe", "Manager", 50000, 10000, 8000, 5000)
