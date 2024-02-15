@@ -1,0 +1,11 @@
+def check_equality(value1, value2):
+    if value1 == value2:
+        return "Equal"
+    else:
+        return "Not equal"
+
+Example usage
+value1 = input("Enter the first value: ")
+value2 = input("Enter the second value: ")
+result = check_equality(value1, value2)
+print("The values are", result)
