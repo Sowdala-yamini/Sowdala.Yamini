@@ -1,0 +1,11 @@
+def print_even_numbers(n):
+    count = 0
+    num = 2
+    while count < n:
+        print(num, end=" ")
+        count += 1
+        num += 2
+
+n = int(input("Enter the value of n: "))
+print("First", n, "even numbers are:")
+print_even_numbers(n)
