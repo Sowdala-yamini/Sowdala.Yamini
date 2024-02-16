@@ -1,0 +1,12 @@
+def print_odd_numbers(n):
+    count = 0
+    num = 1
+    while count < n:
+        if num % 2 != 0:
+            print(num, end=" ")
+            count += 1
+        num += 1
+
+n = int(input("Enter the value of n: "))
+print("First", n, "odd numbers are:")
+print_odd_numbers(n)
